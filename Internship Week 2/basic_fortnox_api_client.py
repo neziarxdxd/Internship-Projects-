@@ -43,7 +43,7 @@ class FortnoxAPI:
                    ],
                    "CustomerNumber": str(customerNumber),
                    "VATIncluded": "true",
-                   "YourReference": str(orderId),
+                   "YourReference": str(434334), #orderid
                    "InvoiceDate": (datetime.strptime(str(date), "%Y-%m-%d") + timedelta(days=-30)).date().__str__(),
                    "DueDate": str(date),
                }
@@ -229,5 +229,6 @@ class FortnoxAPIException(Exception):
 
 
 fortnox = FortnoxAPI()
-x = fortnox.createCustomer("Raizen")
+
+y = fortnox.createInvoiceCdon("2019-01-21",345,"CDON","6928641")
 print(x)

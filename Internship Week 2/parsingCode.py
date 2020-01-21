@@ -1,3 +1,6 @@
+# Install the Python Requests library:
+# `pip install requests`
+
 import requests
 import json
 
@@ -8,8 +11,8 @@ def send_request():
         r = requests.post(
             url="https://api.fortnox.se/3/invoices",
             headers = {
-                "Access-Token":"61cf63ae-4ab9-4a95-9db5-753781c4f41f",
-                "Client-Secret":"3Er4kHXZTJ",
+                "Access-Token":"2c49ee10-c03b-0744-18b7-283451dbf2ae",
+                "Client-Secret":"OQU8UVTY0B",
                 "Content-Type":"application/json",
                 "Accept":"application/json",
             },
@@ -29,6 +32,4 @@ def send_request():
         print('Response HTTP Response Body : {content}'.format(content=r.content))
     except requests.exceptions.RequestException as e:
         print('HTTP Request failed')
-x= send_request()
-print(x)
-
+send_request()
